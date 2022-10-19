@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+#main-doc {
+  display: flex;
+  font-family:"Open Sans", Arial, sans-serif;
+}
+
+/* left side */
+#left-side {
+  min-width: 300px;
+}
+
+#navbar{
+  position: sticky;
+  top: 0;
+}
+
+#title {
+  font-size: 3rem;
+  font-weight: 500;
+  padding: 15px 0 ;
+  text-align: center;
+}
+
+#nav-links{
+  overflow-y:auto;
+  height: 91vh;
+}
+
+#nav-links li:first-child a{
+  border-top:1px solid black;
+}
+
+#nav-links a {
+  padding: 12px 5px 12px 20px;
+  display:block;
+  border-bottom:1px solid black;
+}
+
+.nav-link{ 
+  color:rgb(35, 35, 35) ;
+  font-weight: 100;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+/* right-side */
+#right-side {
+  padding: 40px;
+  border-left: 2px solid grey;
+}
+
+#right-side *{
+  margin-bottom: 15px;
+}
+
+.content-container * {
+  color: rgb(84, 84, 84);
+  margin-left: 15px;
+}
+
+header {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: black;
+  line-height: 40px;
+}
+
+p, li {
+  font-size: 1.6rem;
+  line-height: 25px;
+}
+
+.li-container {
+  padding-left: 60px;
+}
+
+.sub-li-container {
+  padding-left: 30px;
+}
+
+.code{
+  font-size:1.2rem;
+  display: block;
+  line-height: 25px;
+  background-color:#F7F7F7;
+  padding: 18px;
+  margin-left: 35px;
+  border-radius: 5px;
+}
+
+.MDN{
+  margin-left: 0;
+  text-decoration:underline;
+  color: blue;
+}
+
+
+/* ipad */
+@media (max-width: 800px){
+  #main-doc{
+    flex-direction:column;
+  }
+
+  #nav-links{
+    height: 250px;
+    overflow-y:scroll;
+    border:1px solid black;
+  
+  }
+
+  .sub-li-container{
+    padding-left:10px;
+  }
+
+  .li-container{
+    padding-left:20px;
+  }
+
+  .code{
+    margin-left:25px;
+  }
+
+}
+
+@media (max-width: 480px){
+
+.nav-link {
+  font-weight: 300;
+}
+
+
+
+#right-side {
+  padding: 20px;
+  border-left: none;
+}
+}
